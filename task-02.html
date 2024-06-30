@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Отзывы о продуктах</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+    }
+    #reviewInput {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #reviewsContainer {
+        margin-top: 20px;
+    }
+    .review {
+        background-color: #f0f0f0;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+    <h1>Отзывы о продуктах</h1>
+
+    <input type="text" id="reviewInput" placeholder="Введите ваш отзыв...">
+    <button onclick="addReview()">Добавить отзыв</button>
+
+    <div id="reviewsContainer">
+        <!-- Сюда будут добавляться отзывы -->
+    </div>
+
+    <script src="./task-02.js">
+        // JavaScript код будет здесь
+    </script>
+</body>
+</html>
