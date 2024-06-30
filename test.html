@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Отзывы о продуктах</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+    }
+    h1 {
+        margin-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .product-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    .product-item {
+        margin-bottom: 10px;
+    }
+    .reviews-list {
+        margin-top: 20px;
+        padding: 0;
+        list-style-type: none;
+    }
+    .review-item {
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .delete-btn {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        float: right;
+    }
+</style>
+</head>
+<body>
+    <h1>Отзывы о продуктах</h1>
+
+    <!-- Форма для добавления отзыва -->
+    <div id="addReviewForm">
+        <div class="form-group">
+            <label for="productName">Название продукта:</label>
+            <input type="text" id="productName">
+        </div>
+        <div class="form-group">
+            <label for="reviewText">Отзыв:</label>
+            <textarea id="reviewText" rows="4"></textarea>
+        </div>
+        <button onclick="addReview()" id="addReviewBtn">Добавить отзыв</button>
+    </div>
+
+    <!-- Секция для просмотра отзывов -->
+    <div id="viewReviewsSection">
+        <h2>Продукты с отзывами:</h2>
+        <ul id="productList" class="product-list">
+            <!-- Сюда будут добавляться продукты с отзывами -->
+        </ul>
+    </div>
+
+    <!-- Шаблон отзыва (скрытый) -->
+    <template id="reviewTemplate">
+        <li class="review-item">
+            <span id="productNameSpan"></span>
+            <button class="delete-btn" onclick="deleteReview(this)">Удалить</button>
+            <p id="reviewTextPara"></p>
+        </li>
+    </template>
+
+    <script src="task.js"></script>
+</body>
+</html>
